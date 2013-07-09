@@ -48,6 +48,14 @@ install apache2 \
 	rabbitmq-server \
 	netcat
 
+#Setup Virtualenv
+sudo mkdir /opt/graphite
+sudo chown ugo+rwx /opt/graphite
+sudo easy_install pip
+sudo pip install virtualenv
+virtualenv /opt/graphite
+source /opt/graphite/bin/activate
+
 #install with pip
 pips whisper carbon graphite-web
 
